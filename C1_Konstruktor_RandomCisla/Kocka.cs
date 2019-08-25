@@ -16,10 +16,10 @@ namespace C1_Konstruktor_RandomCisla
         {
             this.pocetStien = aPocetStien;
             random = new Random();
-            validation();
+            Validation();
         }
 
-        private void validation()
+        private void Validation()
         {
             if (pocetStien < 0)
             {
@@ -27,12 +27,12 @@ namespace C1_Konstruktor_RandomCisla
             }
         }
 
-        public sbyte getPocetStien()
+        public sbyte GetPocetStien()
         {
             return pocetStien;
         }
 
-        public sbyte getRandomHod()
+        public sbyte GetRandomHod()
         {
             return Convert.ToSByte(random.Next(1, pocetStien + 1));
             
@@ -40,7 +40,7 @@ namespace C1_Konstruktor_RandomCisla
 
         public override string ToString()
         {
-            return String.Format("Ďakujem za vstup\n zadali ste kocku s {0} stenami", getPocetStien());
+            return String.Format("Ďakujem za vstup\n zadali ste kocku s {0} stenami", GetPocetStien());
         }
     }
 }

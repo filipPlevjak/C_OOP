@@ -24,7 +24,7 @@ namespace C1_Konstruktor_RandomCisla
                 Console.WriteLine(kocka.ToString());
                 for (int i = 0; i < TEEN; i++)
                 {
-                    Console.Write(kocka.getRandomHod() + " ");
+                    Console.Write(kocka.GetRandomHod() + " ");
                 }
 
                 Console.ReadKey();
