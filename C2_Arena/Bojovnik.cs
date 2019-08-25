@@ -21,19 +21,19 @@ namespace C2_Arena
         private byte maxZivot;
 
         //utok v HP
-        private sbyte utok;
+        private byte utok;
 
         //obrana v HP
-        private sbyte obrana;
+        private byte obrana;
 
         //inštancia hracej kocky
         private Kocka kocka;
 
-        public Bojovnik(string meno, byte zivot, sbyte utok, sbyte obrana, Kocka kocka)
+        public Bojovnik(string meno, byte zivot, byte utok, byte obrana, Kocka kocka)
         {
             this.meno = meno;
             this.zivot = zivot;
-            this.maxZivot = 100;
+            this.maxZivot = zivot;
             this.utok = utok;
             this.obrana = obrana;
             this.kocka = kocka;
@@ -67,7 +67,24 @@ namespace C2_Arena
 
 
             return sGrafickyZivot;
+        }
 
+        public void BranSa(byte uder)
+        {
+            byte zranenie = (byte)(uder - (obrana + kocka.GetRandomHod()));
+            if (zranenie > 0)
+            {
+                zivot -= (byte)zranenie;
+                if (zivot <= 0)
+                    zivot = 0;
+
+            }
+        }
+
+        public void Utoc(Bojovnik super)
+        {
+            byte uder = (byte)(utok + kocka.GetRandomHod());
+            super.BranSa(uder);
         }
 
     }

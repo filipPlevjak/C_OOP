@@ -17,7 +17,16 @@ namespace C2_Arena
         {
             Kocka kocka = new Kocka(10);
 
-            Bojovnik Flip = new Bojovnik("Filip", 1, 0, 0, kocka);
+            Bojovnik filip = new Bojovnik("Filip", 100, 90, 20, kocka);
+
+            Console.WriteLine("Bojovník: {0}", filip); // test ToString();
+            Console.WriteLine("Naživu: {0}", filip.JeNaZivu()); // test Nazivu();
+            Console.WriteLine("Život: {0}", filip.GrafickyZivot()); // test GrafickyZivot();
+
+            filip.Utoc(filip);
+            Console.WriteLine(filip.GrafickyZivot());
+            Console.ReadKey();
+
 
 
 
