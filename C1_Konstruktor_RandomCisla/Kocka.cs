@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace C1_Konstruktor_RandomCisla
 {
-    class Program
+    class Kocka
     {
-        static void Main(string[] args)
+        private Random random;
+        private int pocetStien;
+        public Kocka(int pocetStien)
         {
-            Kocka kocka = new Kocka(6);
+            this.pocetStien = pocetStien;
         }
     }
 }
