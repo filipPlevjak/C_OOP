@@ -11,6 +11,7 @@ namespace C1_Konstruktor_RandomCisla
         static void Main(string[] args)
         {
             Kocka kocka = new Kocka(6);
+            //fg
         }
     }
 }
