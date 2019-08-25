@@ -10,9 +10,16 @@ namespace C1_Konstruktor_RandomCisla
     {
         private Random random;
         private int pocetStien;
-        public Kocka(int pocetStien)
+
+        public Kocka(int aPocetStien)
         {
-            this.pocetStien = pocetStien;
+            this.pocetStien = aPocetStien;
+            random = new Random();
+        }
+
+        public int getPocetStien()
+        {
+            return pocetStien;
         }
     }
 }
