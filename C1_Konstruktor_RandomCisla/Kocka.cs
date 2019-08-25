@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace C1_Konstruktor_RandomCisla
 {
-    class Kocka
+    public class Kocka
     {
         private Random random;
         private sbyte pocetStien; //nepredpokladame ze sa bude hadzat viac ako 127 stenovou kockou....

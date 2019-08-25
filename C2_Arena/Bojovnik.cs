@@ -27,16 +27,17 @@ namespace C2_Arena
         private sbyte obrana;
 
         //inštancia hracej kocky
-       // private Kocka kocka;
+        private Kocka kocka;
 
-        public Bojovnik(string meno, byte zivot, sbyte utok, sbyte obrana)
+        public Bojovnik(string meno, byte zivot, sbyte utok, sbyte obrana, Kocka kocka)
         {
             this.meno = meno;
             this.zivot = zivot;
-            this.maxZivot = zivot;
+            this.maxZivot = 100;
             this.utok = utok;
             this.obrana = obrana;
-            //this.kocka = kocka;
+            this.kocka = kocka;
+            GrafickyZivot();
         }
 
         public override string ToString()

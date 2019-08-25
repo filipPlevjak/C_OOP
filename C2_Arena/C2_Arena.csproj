@@ -50,5 +50,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\C1_Konstruktor_RandomCisla\C1_Konstruktor_RandomCisla.csproj">
+      <Project>{9183f531-2bab-4d9e-82db-2ac1ef4423b4}</Project>
+      <Name>C1_Konstruktor_RandomCisla</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

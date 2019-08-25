@@ -4,8 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+
 namespace C1_Konstruktor_RandomCisla
 {
+    
     class Program
     {
         public const sbyte TEEN = 10;
