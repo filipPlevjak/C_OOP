@@ -15,16 +15,16 @@ namespace C2_Arena
         private string meno;
 
         //Život v HP
-        private byte zivot;
+        private short zivot;
 
         //max život v HP
-        private byte maxZivot;
+        private short maxZivot;
 
         //utok v HP
-        private byte utok;
+        private short utok;
 
         //obrana v HP
-        private byte obrana;
+        private short obrana;
 
         //inštancia hracej kocky
         private Kocka kocka;
@@ -32,7 +32,7 @@ namespace C2_Arena
         //get/set sprava
         private string sprava;
 
-        public Bojovnik(string meno, byte zivot, byte utok, byte obrana, Kocka kocka)
+        public Bojovnik(string meno, short zivot, short utok, short obrana, Kocka kocka)
         {
             this.meno = meno;
             this.zivot = zivot;
@@ -74,22 +74,23 @@ namespace C2_Arena
 
         public void Utoc(Bojovnik super)
         {
-            byte uder = (byte)(utok + kocka.GetRandomHod());
-            setSpravu(String.Format("{0} útočí s úderom za {1} HP", meno, uder);
+            short uder = (short)(utok + kocka.GetRandomHod());
+            setSpravu(String.Format("{0} útočí s úderom za {1} HP", meno, uder));
             super.BranSa(uder);
         }
 
-        public void BranSa(byte uder)
+        public void BranSa(short uder)
         {
-            byte zranenie = (byte)(uder - (obrana + kocka.GetRandomHod()));
+            short zranenie = (short)(uder - (obrana + kocka.GetRandomHod()));
             if (zranenie > 0)
             {
-                zivot -= (byte)zranenie;
+                zivot -= (short)zranenie;
                 sprava = String.Format("{0} utrpel poškodenie {1} HP", meno, zranenie);
                 if (zivot <= 0)
+                {
                     zivot = 0;
-                sprava += " a zomrel";
-
+                    sprava += " a zomrel";
+                }
             }
 
             else
