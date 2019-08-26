@@ -29,6 +29,9 @@ namespace C2_Arena
         //inštancia hracej kocky
         private Kocka kocka;
 
+        //get/set sprava
+        private string sprava;
+
         public Bojovnik(string meno, byte zivot, byte utok, byte obrana, Kocka kocka)
         {
             this.meno = meno;
@@ -69,23 +72,42 @@ namespace C2_Arena
             return sGrafickyZivot;
         }
 
+        public void Utoc(Bojovnik super)
+        {
+            byte uder = (byte)(utok + kocka.GetRandomHod());
+            setSpravu(String.Format("{0} útočí s úderom za {1} HP", meno, uder);
+            super.BranSa(uder);
+        }
+
         public void BranSa(byte uder)
         {
             byte zranenie = (byte)(uder - (obrana + kocka.GetRandomHod()));
             if (zranenie > 0)
             {
                 zivot -= (byte)zranenie;
+                sprava = String.Format("{0} utrpel poškodenie {1} HP", meno, zranenie);
                 if (zivot <= 0)
                     zivot = 0;
+                sprava += " a zomrel";
 
             }
+
+            else
+                sprava = String.Format("{0} odrazil utok", meno);
+            setSpravu(sprava);
         }
 
-        public void Utoc(Bojovnik super)
+        private void setSpravu(string sprava)
         {
-            byte uder = (byte)(utok + kocka.GetRandomHod());
-            super.BranSa(uder);
+            this.sprava = sprava;
         }
+
+        public string getPoslednuSpravu()
+        {
+            return sprava;
+        }
+
+
 
     }
 }
