@@ -75,12 +75,14 @@ namespace C2_Arena
         public void Utoc(Bojovnik super)
         {
             short uder = (short)(utok + kocka.GetRandomHod());
-            setSpravu(String.Format("{0} útočí s úderom za {1} HP", meno, uder));
+            SetSpravu(String.Format("{0} útočí s úderom za {1} HP", meno, uder));
             super.BranSa(uder);
         }
 
         public void BranSa(short uder)
         {
+            
+
             short zranenie = (short)(uder - (obrana + kocka.GetRandomHod()));
             if (zranenie > 0)
             {
@@ -95,18 +97,21 @@ namespace C2_Arena
 
             else
                 sprava = String.Format("{0} odrazil utok", meno);
-            setSpravu(sprava);
+            SetSpravu(sprava);
+
+          
         }
 
-        private void setSpravu(string sprava)
+        private void SetSpravu(string sprava)
         {
             this.sprava = sprava;
         }
 
-        public string getPoslednuSpravu()
+        public string GetPoslednuSpravu()
         {
             return sprava;
         }
+
 
 
 

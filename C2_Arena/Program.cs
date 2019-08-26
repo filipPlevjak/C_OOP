@@ -16,50 +16,13 @@ namespace C2_Arena
         static void Main(string[] args)
         {
             Kocka kocka = new Kocka(10);
+            Bojovnik Thor = new Bojovnik("Thor", 100, 20, 10, kocka);
+            Bojovnik Hulk = new Bojovnik("Hulk", 60, 18, 15, kocka);
 
-            Bojovnik Thor = new Bojovnik("Thor", 100, 15, 12, kocka);
-
-            //Console.WriteLine("Bojovník: {0}", filip); // test ToString();
-            //Console.WriteLine("Naživu: {0}", filip.JeNaZivu()); // test Nazivu();
-            Console.WriteLine("Život: {0}", Thor.GrafickyZivot()); // test GrafickyZivot();
-
-            Bojovnik Hulk = new Bojovnik("Hulk",90,25,9,kocka);
-            Hulk.Utoc(Thor);
-            Console.WriteLine(Hulk.getPoslednuSpravu());
-            Console.WriteLine(Thor.getPoslednuSpravu());
-
-            Console.WriteLine(Thor.GrafickyZivot());
+            Arena arena = new Arena(Thor, Hulk, kocka);
+            arena.Zapas();
             Console.ReadKey();
-
-
-            while (Thor.JeNaZivu() && Hulk.JeNaZivu() )
-            {
-                Thor.Utoc(Hulk);
-                Console.WriteLine(Thor.getPoslednuSpravu());
-                Console.WriteLine(Hulk.getPoslednuSpravu());
-
-                Console.WriteLine(Thor.GrafickyZivot());
-                Console.WriteLine(Hulk.GrafickyZivot());
-
-                //kontrola ci ziju hraci
-                if (!(Thor.JeNaZivu() && Hulk.JeNaZivu()))
-                    break;
-
-
-                Hulk.Utoc(Thor);
-
-                    Console.WriteLine(Hulk.getPoslednuSpravu());
-                    Console.WriteLine(Thor.getPoslednuSpravu());
-                Console.WriteLine(Thor.GrafickyZivot());
-                Console.WriteLine(Hulk.GrafickyZivot());
-
-            }
-
-
-            //vyhral hrac ktory je na zive
-            Console.WriteLine("vyhral hrac: {0}");
-
-            Console.ReadKey();
+             
 
         }
     }
