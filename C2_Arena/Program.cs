@@ -17,41 +17,41 @@ namespace C2_Arena
         {
             Kocka kocka = new Kocka(10);
 
-            Bojovnik filip = new Bojovnik("Filip", 100, 20, 10, kocka);
+            Bojovnik Thor = new Bojovnik("Thor", 100, 15, 12, kocka);
 
             //Console.WriteLine("Bojovník: {0}", filip); // test ToString();
             //Console.WriteLine("Naživu: {0}", filip.JeNaZivu()); // test Nazivu();
-            Console.WriteLine("Život: {0}", filip.GrafickyZivot()); // test GrafickyZivot();
+            Console.WriteLine("Život: {0}", Thor.GrafickyZivot()); // test GrafickyZivot();
 
-            Bojovnik protivnik = new Bojovnik("Shadow",40,18,15,kocka);
-            protivnik.Utoc(filip);
-            Console.WriteLine(protivnik.getPoslednuSpravu());
-            Console.WriteLine(filip.getPoslednuSpravu());
+            Bojovnik Hulk = new Bojovnik("Hulk",90,25,9,kocka);
+            Hulk.Utoc(Thor);
+            Console.WriteLine(Hulk.getPoslednuSpravu());
+            Console.WriteLine(Thor.getPoslednuSpravu());
 
-            Console.WriteLine(filip.GrafickyZivot());
+            Console.WriteLine(Thor.GrafickyZivot());
             Console.ReadKey();
 
 
-            while (filip.JeNaZivu() && protivnik.JeNaZivu() )
+            while (Thor.JeNaZivu() && Hulk.JeNaZivu() )
             {
-                filip.Utoc(protivnik);
-                Console.WriteLine(filip.getPoslednuSpravu());
-                Console.WriteLine(protivnik.getPoslednuSpravu());
+                Thor.Utoc(Hulk);
+                Console.WriteLine(Thor.getPoslednuSpravu());
+                Console.WriteLine(Hulk.getPoslednuSpravu());
 
-                Console.WriteLine(filip.GrafickyZivot());
-                Console.WriteLine(protivnik.GrafickyZivot());
+                Console.WriteLine(Thor.GrafickyZivot());
+                Console.WriteLine(Hulk.GrafickyZivot());
 
                 //kontrola ci ziju hraci
-                if (!(filip.JeNaZivu() && protivnik.JeNaZivu()))
+                if (!(Thor.JeNaZivu() && Hulk.JeNaZivu()))
                     break;
 
 
-                protivnik.Utoc(filip);
+                Hulk.Utoc(Thor);
 
-                    Console.WriteLine(protivnik.getPoslednuSpravu());
-                    Console.WriteLine(filip.getPoslednuSpravu());
-                Console.WriteLine(filip.GrafickyZivot());
-                Console.WriteLine(protivnik.GrafickyZivot());
+                    Console.WriteLine(Hulk.getPoslednuSpravu());
+                    Console.WriteLine(Thor.getPoslednuSpravu());
+                Console.WriteLine(Thor.GrafickyZivot());
+                Console.WriteLine(Hulk.GrafickyZivot());
 
             }
 
