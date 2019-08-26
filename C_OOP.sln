@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C1_Konstruktor_RandomCisla"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C2_Arena", "C2_Arena\C2_Arena.csproj", "{0E636B83-15CE-4452-A67D-6E887550EDF8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sach", "Sach\Sach.csproj", "{F20C0446-1722-491B-B318-2F52231580E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0E636B83-15CE-4452-A67D-6E887550EDF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E636B83-15CE-4452-A67D-6E887550EDF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E636B83-15CE-4452-A67D-6E887550EDF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F20C0446-1722-491B-B318-2F52231580E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F20C0446-1722-491B-B318-2F52231580E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F20C0446-1722-491B-B318-2F52231580E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F20C0446-1722-491B-B318-2F52231580E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
